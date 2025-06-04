@@ -1,0 +1,29 @@
+# PROJECT: NewTest
+
+[NewTest]
+version = "0.1.0"
+
+lang = "C++"
+cpp.std = 14
+cpp.compiler = "clang++"
+
+build.type = "executable"
+build.dir = "./build"
+
+src = "./src"
+
+includes = [
+    "./src",
+    "./include/NewTest"
+]
+
+[NewTest.compiler]
+
+debug.defines = [
+    "NT_DEBUG"
+]
+
+release.optimization = 2
+release.defines = [
+    "NT_NDEBUG"
+]
